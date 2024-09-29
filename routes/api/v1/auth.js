@@ -13,7 +13,7 @@ router.post('/register', async (req, res) => {
   //   email: "email",
   //   phone_number: "number"
   // };
-  return register(res, username, profile_image, user_password, email, phone_number);
+  return register(res, username, user_password, email, phone_number);
 });
 
 router.post('/login', async (req, res) => {

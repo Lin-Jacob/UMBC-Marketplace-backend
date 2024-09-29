@@ -18,9 +18,9 @@ db.connect((err) => {
   console.log("mySQL connected for users");
 });
 
-async function register(res, username, profile_image, user_password, email, phone_number){
-  const sql = `INSERT INTO umbcmarketplace.users (username, profile_image, user_password, email, phone_number) VALUES (?, ?, ?, ?, ?);`;
-  db.query(sql, [username, profile_image, await hashPassword(user_password), email, phone_number], (err, result) => {
+async function register(res, username, user_password, email, phone_number){
+  const sql = `INSERT INTO umbcmarketplace.users (username, user_password, email, phone_number) VALUES (?, ?, ?, ?);`;
+  db.query(sql, [username, await hashPassword(user_password), email, phone_number], (err, result) => {
     if (err) {
       if (err.code === 'ER_DUP_ENTRY') {
         console.log("ALREADY REGISTERED");
