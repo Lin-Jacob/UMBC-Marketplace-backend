@@ -9,3 +9,7 @@ GET http://localhost:3000/api/v1/users/1
 PUT http://localhost:3000/api/v1/users/1
 ###
 DELETE http://localhost:3000/api/v1/users/1
+###
+GET http://localhost:3000/api/v1/items/1
+###
+POST http://localhost:3000/api/v1/items/list_item
