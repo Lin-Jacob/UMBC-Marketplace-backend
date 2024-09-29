@@ -1,0 +1,21 @@
+{
+  "name": "umbc-marketplace-backend",
+  "version": "1.0.0",
+  "description": "backend server for umbc marketplace app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "devStart": "nodemon server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.21.0"
+  },
+  "devDependencies": {
+    "bcrypt": "^5.1.1",
+    "dotenv": "^16.4.5",
+    "mysql": "^2.18.1",
+    "nodemon": "^3.1.7"
+  }
+}
