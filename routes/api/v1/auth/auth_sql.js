@@ -4,9 +4,10 @@ const { hashPassword, compare } = require('./auth_helper.js');
 
 const mysql = require("mysql");
 const db = mysql.createConnection({
-  host: "localhost",
-  user: "root",
-  password: "password"
+  host: process.env.dbhost,
+  user: process.env.dbuser,
+  password: process.env.dbpassword,
+  database: process.env.dbdatabase
 });
 
 db.connect((err) => {

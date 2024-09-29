@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 
-const { register, login, logout } = require("./auth_sql.js")
+const { register, login, logout } = require("./auth/auth_sql.js");
 
 router.post('/register', async (req, res) => {
   const { username, profile_image, user_password, email, phone_number } = req.body;
@@ -20,7 +20,7 @@ router.post('/login', async (req, res) => {
   const { username, user_password } = req.body;
   // const { username, user_password } = 
   // { 
-  //   username: "name1",
+  //   username: "name",
   //   user_password: "password"
   // };
   return login(res, username, user_password);
@@ -30,7 +30,7 @@ router.post('/logout', async (req, res) => {
   const { username} = req.body;
   // const { username} =
   // {
-  //   username: "name1",
+  //   username: "name",
   // };
   return logout(res, username);
 });
